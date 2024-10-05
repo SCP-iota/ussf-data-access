@@ -1,0 +1,26 @@
+{
+  "name": "ussf-data-access",
+  "version": "0.0.1",
+  "description": "Library and UI for resilient access to a USSF satellite data API",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SCP-iota/ussf-data-access.git"
+  },
+  "keywords": [
+    "api",
+    "ui",
+    "webapp",
+    "space",
+    "data"
+  ],
+  "author": "SCP-iota",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/SCP-iota/ussf-data-access/issues"
+  },
+  "homepage": "https://github.com/SCP-iota/ussf-data-access#readme"
+}
