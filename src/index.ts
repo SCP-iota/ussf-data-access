@@ -1,10 +1,15 @@
 import APISource from './core/APISource'
+import FallbackMultiplexer from './core/FallbackMultiplexer'
 
-const src = new APISource('http://localhost:3000/https://api.spaceforce.sh', {
+const apiSrc = new APISource('http://localhost:3000/https://api.spaceforce.sh', {
   username: 'alice',
   password: 'secret'
 })
-;(window as any).src = src
-src.onAuth?.then(async () => {
-  console.log(await src.getPrivateSatellites(1))
+const failSrc = new APISource('https://spaseforse.example')
+
+Promise.all([failSrc.onAuth!, apiSrc.onAuth!]).then(async () => {
+  console.log('Listing private satellites...')
+  const src = new FallbackMultiplexer([failSrc, apiSrc])
+  ;(window as any).src = src
+  console.log(await src.getPrivateSatellites(3))
 })

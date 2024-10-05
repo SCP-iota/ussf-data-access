@@ -14,7 +14,7 @@ async function readPages(url: string, fetchOptions: any, numPages: any): Promise
     const results = await fetch(newUrl, fetchOptions).then(res =>
       res.json()
     )
-    console.log(results)
+
     for(const result of results) {
       items.push(result)
     }
@@ -48,7 +48,6 @@ export default class APISource implements DataSource {
       .then(json => {
         this.authStatus = 'succeeded'
 	this.authToken = json.access_token
-	console.log(json)
       })
     }
   }
