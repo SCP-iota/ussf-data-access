@@ -4,7 +4,7 @@
   "description": "Library and UI for resilient access to a USSF satellite data API",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/SCP-iota/ussf-data-access/issues"
   },
-  "homepage": "https://github.com/SCP-iota/ussf-data-access#readme"
+  "homepage": "https://github.com/SCP-iota/ussf-data-access#readme",
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "webpack-cli": "^5.1.4"
+  }
 }
