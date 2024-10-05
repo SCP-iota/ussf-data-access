@@ -27,5 +27,8 @@
     "ts-loader": "^9.5.1",
     "typescript": "^5.6.2",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "cors-anywhere": "^0.4.4"
   }
 }
